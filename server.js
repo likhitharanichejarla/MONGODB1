@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const UserData = require('./model');
 const app = express();
 app.use(express.json());
-mongoose.connect('mongodb+srv://likhitharanichejarla_db_user:SUlhlUfztaQxj1WL@cluster0.hzz7z7z.mongodb.net/').then(() => console.log('connected to db..')).catch(err => console.log(err))
+mongoose.connect('mongodb+srv://likhitharanichejarla_db_user:@cluster0.hzz7z7z.mongodb.net/').then(() => console.log('connected to db..')).catch(err => console.log(err))
 app.post('/add_user',async (req,res) => {
     const {username} = req.body;
     const {email} = req.body;
